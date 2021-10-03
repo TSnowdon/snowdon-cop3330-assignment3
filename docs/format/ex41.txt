@@ -1,0 +1,26 @@
+@startuml
+
+App "uses" o-- Utils
+
+class App {
+We read the "INPUT_FILE"
+and then write to Console
+the data is stored in "people" for processing
+==
+{static} -List<String> people
+__File Names__
+{static} -String INPUT_FILE
+{static} -String OUTPUT_FILE
+__ Methods __
+{static} + void readFile()
+{static} + void sortPeople()
+{static} + void writeFile()
+}
+
+class Utils {
+Utility methods used
+for ease of processing
+{static} + String writeFormatted()
+{static} + String writeRepeated()
+}
+@enduml
