@@ -1,0 +1,35 @@
+@startuml
+
+App "uses" o-- Utils
+WebsiteTemplate "uses" o-- Utils
+App "formats" o-- WebsiteTemplate
+
+class App {
+Asks the user the specs
+of the website template.
+==
+{static} -WebsiteTemplate template
+__ Methods __
+{static} + void askInput()
+}
+
+class Utils {
+Utility methods used
+for ease of processing
+{static} + void output()
+}
+
+class WebsiteTemplate {
+Data Class for storing
+and created Websites
+==Attributes==
+- String name
+- String author
+- boolean hasJavaScript
+- boolean has CSS
+==Methods==
+Generates the website
++ build()
+}
+
+@enduml
