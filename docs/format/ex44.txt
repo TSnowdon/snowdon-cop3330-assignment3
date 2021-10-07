@@ -1,0 +1,51 @@
+@startuml
+
+class App
+class Inventory
+class Product
+class Utils
+
+App "uses" o-- Utils
+Inventory "stores" o-- Product
+App "deserializes" o-- Inventory
+
+class App {
+Parses a JSON
+that can be queried upon.
+==
+{static} -Inventory inventory
+__ Methods __
+{static} + void parseJSON()
+{static} + void queryProduct()
+{static} + Product getProduct()
+}
+
+class Utils {
+Utility methods used
+for ease of processing
+{static} + String queryInput()
+}
+
+class Inventory {
+- Product[] products;
+__
+Data class for parsing
+the JSON Array
+__
++ Product[] getProducts
+}
+
+class Product{
+Data class for storing
+information that is in
+the JSON Array
+__
+- String name
+- double price
+- int quantity
+__
++ String getName()
++ String toString()
+}
+
+@enduml
