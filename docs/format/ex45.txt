@@ -1,0 +1,36 @@
+@startuml
+
+class App
+class WordFinder
+class Utils
+
+App "uses" -- Utils
+App "uses" -- WordFinder
+
+class App {
+Creates a WordFinder
+__ Methods __
+{static} + void parseJSON()
+{static} + void queryProduct()
+{static} + Product getProduct()
+}
+
+class Utils {
+Utility methods used
+for ease of processing
+{static} + String queryInput()
+}
+
+class WordFinder {
+Utility Class for finding
+Words in a file.
+    - String inputFile
+    - ArrayList<String> contents
+
+
+    + findAndReplace(String find, String replace)
+    + long count(String find)
+    + output()
+    - Scanner getScanner()
+}
+@enduml
