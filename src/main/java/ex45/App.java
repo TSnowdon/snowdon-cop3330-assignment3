@@ -6,6 +6,7 @@
 package ex45;
 
 import tools.Utils;
+import tools.WordFinder;
 
 public class App {
 

@@ -3,7 +3,7 @@
  * Copyright 2021 Tyler Snowdon
  */
 
-package ex45;
+package tools;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -53,15 +53,21 @@ public class WordFinder {
     public long count(String find) {
         long count = 0;
         for (String content : contents) {
-            if(content.contains(find)){
-                count++;
+            String[] token = content.split(" ");
+            for (String s : token) {
+                if(s.contains(find)){
+                    count++;
+                }
             }
         }
-        System.out.println(count);
         return count;
     }
 
     public void output() {
+        if(outputFile == null){
+            return;
+        }
+
         try {
             File output = new File(outputFile);
             FileWriter writer = new FileWriter(output);

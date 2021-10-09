@@ -1,0 +1,58 @@
+@startuml
+
+class App
+class Frequency
+class WordFinder
+class Utils
+
+App "uses" -- Utils
+App "uses" -- WordFinder
+App "stores" -- Frequency
+class Frequency implements Comparable
+
+class App {
+Creates a WordFinder
+__ Methods __
+{static} + void countFrequencies()
+{static} + void printFrequencies()
+}
+
+class Utils {
+Utility methods used
+for ease of processing
+{static} + String output()
+{static} + String writeRepeated()
+}
+
+class WordFinder {
+Utility Class for finding
+Words in a file and then counting
+their frequency.
+__
+    - String inputFile
+    - ArrayList<String> contents
+__
+    + long count(String find)
+}
+
+class Frequency {
+    Data class used to store
+    the word and its frequency.
+    It implements Comparable
+    to make sorting it easy.
+    __
+    - String word
+    - long amount
+    __
+    + long getAmount()
+    + String getWord()
+    + int compareTo(Frequency o)
+}
+
+interface Comparable {
+This interface
+imposes a total ordering
+on the objects of each
+class that implements it.
+}
+@enduml
