@@ -7,8 +7,6 @@ package ex43;
 
 import tools.Utils;
 
-import java.io.IOException;
-
 public class App {
 
     private static WebsiteTemplate template;

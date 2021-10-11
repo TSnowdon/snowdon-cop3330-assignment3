@@ -1,0 +1,27 @@
+Start Program
+Define the input file as "INPUT_FILE";
+Define a list of Frequency as "wordFrequencies";
+Construct a new WordFinder as "finder" leave outputFile as null;
+    "finder" reads "INPUT_FILE";
+        once queried "finder" will start a loop;
+             for each line of data in "INPUT_FILE";
+             store it within the finder;
+        end loop;
+    count the amount of times "snake", "badger" and "mushroom" appear;
+        for each word that you are searching for;
+            ask the finder to count the number of times they appear;
+            once queried "finder" will start a loop;
+            for each line of data in "INPUT_FILE";
+                split the line into an array of Strings;
+                    iterate over the array;
+                        if any array matches the targeted word;
+                            add to the count;
+            end loop;
+            return count;
+        Add the Frequency of that word to "wordFrequencies";
+        end loop;
+    print the a histogram based off of the frequencies;
+        for each Frequency;
+            print the name of the word and a bar that is "count" long;
+        end loop;
+End Program

@@ -1,0 +1,11 @@
+Start Program
+Define INPUT_FILE Location;
+Define List of Records as "records";
+For each line scanned;
+    Parse CSV data into a new Record;
+    Add new Record to "records";
+Close INPUT_FILE;
+Print Table Header;
+For each Record;
+    Print Formatted Row with Record info;
+End Program

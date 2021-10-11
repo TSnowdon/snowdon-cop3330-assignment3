@@ -7,7 +7,10 @@ package ex41;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
 import java.io.IOException;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AppTest {
     @Test
@@ -15,5 +18,6 @@ public class AppTest {
         App.readFile();
         App.sortPeople();
         App.writeFile();
+        assertTrue(() -> new File("src/main/resources/output/exercise41_output.txt").exists());
     }
 }

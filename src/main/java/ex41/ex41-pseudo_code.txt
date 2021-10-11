@@ -1,0 +1,13 @@
+Start Program
+Define INPUT_FILE Location;
+Define OUTPUT_FILE Location;
+Define ArrayList people;
+Open INPUT_FILE;
+Scan each line;
+Store each line in people;
+Close INPUT_FILE;
+Sort people alphabetically;
+Open OUTPUT_FILE;
+Write formatted table of people;
+Close OUTPUT_FILE;
+End Program

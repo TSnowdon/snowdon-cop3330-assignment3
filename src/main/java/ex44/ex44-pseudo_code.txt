@@ -1,0 +1,13 @@
+Start Program
+Define the parsed JSON as "INPUT_JSON";
+Construct a new GSON;
+Construct a new Reader from the "INPUT_JSON";
+Use the new GSON to parse the reader's info into an Inventory Data class;
+Run a do-while loop
+    Query the user for the searched named
+    If the name is invalid or the searched name doesn't exist;
+        print an error message and stay in the do-while loop
+    else;
+        break from the do-while loop;
+print out the data with the matching name;
+End Program

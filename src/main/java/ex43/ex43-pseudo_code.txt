@@ -1,0 +1,11 @@
+Start Program
+Define WebsiteTemplate "template";
+query User for specs of "template";
+construct "template" with queried info;
+Instruct the template to build itself;
+If the needed directory for "template" is there;
+    create base template directory;
+Write the index file;
+Create the JavaScript Directory if specified;
+Create the CSS Directory if specified;
+End Program

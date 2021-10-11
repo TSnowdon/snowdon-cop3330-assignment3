@@ -16,12 +16,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-/**
- * Exercise 41 - Name Sorter
- * Alphabetizing the contents of a file, or sorting its contents, is a great way to get comfortable manipulating a file in your program.
- * <p>
- * Create a program that reads in the following list of names from a file called `exercise41_input.txt` and sorts the list alphabetically:
- */
 public class App {
     private static final String INPUT_FILE = "src/main/resources/input/exercise41_input.txt";
     private static final String OUTPUT_FILE = "src/main/resources/output/exercise41_output.txt";

@@ -1,0 +1,15 @@
+Start Program
+Define the input file as "INPUT_FILE";
+Construct a new WordFinder as "finder";
+    "finder" reads "INPUT_FILE" and then asks the user where to output;
+    once queried "finder" will start a loop;
+    for each line of data in "INPUT_FILE";
+        store it within the finder;
+    end loop;
+Ask "finder" to find "utilize" and replace it with "use";
+    "finder" dumps the previous data;
+    for each line of data in "INPUT_FILE";
+        store it and replace instances of "utilize" with "use";
+    end loop;
+write the data to previously defined output file;
+End Program
